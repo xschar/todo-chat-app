@@ -37,6 +37,6 @@
 
 ## Tasks:
 
-- [ ] Initiate boilerplate
+- [x] Initiate boilerplate
 - [ ] Make a simple UI
 - [ ] Configure redux
