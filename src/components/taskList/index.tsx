@@ -1,10 +1,10 @@
 import React from "react"
-import {useSelector} from "react-redux"
+import {useAppSelector} from "store/hooks"
 import {Task} from "components/task"
 import type {RootState} from "store/store"
 
 export const TaskList: React.FC = () => {
-  const tasks = useSelector((state: RootState) => state.tasks.item)
+  const tasks = useAppSelector((state) => state.tasks.item)
   return (
     <div>
       {tasks.map((task) => (
