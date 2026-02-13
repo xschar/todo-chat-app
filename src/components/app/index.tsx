@@ -1,8 +1,9 @@
 import React from "react"
 import "styles/global.css"
+import { Layout } from "components/layout"
 
 export const App: React.FC = () => {
   return (
-    <>Hello webpack prettier eslint typescript react css-modules</>
+    <Layout></Layout>
   )
 }
