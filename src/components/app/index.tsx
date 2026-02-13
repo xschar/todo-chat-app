@@ -1,14 +1,14 @@
 import React from "react"
 import "styles/global.css"
 import { Layout } from "components/layout"
-import { AddTask } from "components/addTask"
-import { FilterTask } from "components/filterTask"
+import { TaskAdd } from "components/taskAdd"
+import { TaskFilter } from "components/taskFilter"
 
 export const App: React.FC = () => {
   return (
     <Layout>
-      <AddTask />
-      <FilterTask />
+      <TaskAdd />
+      <TaskFilter />
     </Layout>
   )
 }

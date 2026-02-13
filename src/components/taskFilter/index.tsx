@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "components/button";
 
-export const FilterTask: React.FC = () => {
+export const TaskFilter: React.FC = () => {
   return(
     <div>
       <Button displayType="regular" title="All"></Button>

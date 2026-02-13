@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "components/button";
 
-export const AddTask: React.FC = () => {
+export const TaskAdd: React.FC = () => {
   return(
     <form>
       <input
