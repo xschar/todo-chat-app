@@ -1,8 +1,8 @@
-import React from "react";
-import { Button } from "components/button";
+import React from "react"
+import {Button} from "components/button"
 
 export const TaskAdd: React.FC = () => {
-  return(
+  return (
     <form>
       <input
         type="text"
