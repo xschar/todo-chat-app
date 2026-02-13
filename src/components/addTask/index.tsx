@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "components/button";
 
 export const AddTask: React.FC = () => {
   return(
@@ -8,9 +9,7 @@ export const AddTask: React.FC = () => {
         placeholder="type your task..."
         aria-label="Text input"
       />
-      <button>
-        Add
-      </button>
+      <Button displayType="regular" title="Add" />
     </form>
   )
 }
