@@ -1,13 +1,6 @@
 # Chat-app test
 
-## Tech stack:
-
-- React
-- Typescript
-- Redux Toolkit
-- Css modules
-- Eslint, Prettier
-- Webpack
+Тестовое задание для Chat-app
 
 ## Description
 
@@ -33,9 +26,11 @@
 Реализуйте функционал перетаскивания задач для изменения их порядка в списке. 
 Добавьте возможность сохранения задач в локальное хранилище браузера для сохранения данных между сеансами. 
 
+## Tech stack:
 
-## Tasks:
-
-- [ ] Initiate boilerplate
-- [ ] Create UI
-- [ ] ...
+- React
+- Typescript
+- Redux Toolkit
+- Css modules
+- Eslint, Prettier
+- Webpack
