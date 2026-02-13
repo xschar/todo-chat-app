@@ -1,9 +1,9 @@
 {
-  "name": "boilerplate",
+  "name": "todo-list-test-chat-app",
   "version": "1.0.0",
-  "description": "eslint+prettier+react+ts+cssmodules+webpack",
+  "description": "simple todo list for testing my skillz before interview",
   "license": "ISC",
-  "author": "trshmdo",
+  "author": "xschar",
   "type": "commonjs",
   "main": "src/index.tsx",
   "scripts": {
