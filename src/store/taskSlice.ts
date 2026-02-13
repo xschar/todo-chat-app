@@ -1,7 +1,12 @@
-import {createSlice, type PayloadAction} from "@reduxjs/toolkit"
+import {createSlice, type PayloadAction, nanoid} from "@reduxjs/toolkit"
+
+interface Task {
+  id: string
+  title: string
+}
 
 interface TaskState {
-  item: string[]
+  item: Task[]
 }
 
 const initialState: TaskState = {
@@ -12,8 +17,18 @@ const taskSlice = createSlice({
   name: "task",
   initialState,
   reducers: {
-    addTask(state, action: PayloadAction<string>) {
-      state.item.push(action.payload)
+    addTask: {
+      reducer(state, action: PayloadAction<Task>) {
+        state.item.push(action.payload)
+      },
+      prepare(title: string) {
+        return {
+          payload: {
+            id: nanoid(),
+            title
+          }
+        }
+      }
     }
   }
 })
