@@ -34,3 +34,9 @@
 - Css modules
 - Eslint, Prettier
 - Webpack
+
+## Tasks:
+
+- [ ] Initiate boilerplate
+- [ ] Make a simple UI
+- [ ] Configure redux
