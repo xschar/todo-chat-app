@@ -7,9 +7,9 @@ import {reorderTasks} from "store/taskSlice"
 export const TaskList: React.FC = () => {
   const [draggedId, setDraggedId] = useState<string | null>(null)
   const dispatch = useAppDispatch()
-  const tasks = useAppSelector((state) => state.tasks.item)
-  const {item, filter} = useAppSelector((state) => state.tasks)
-  const filteredTasks = item.filter((task) => {
+  const tasks = useAppSelector((state) => state.tasks.items)
+  const {items, filter} = useAppSelector((state) => state.tasks)
+  const filteredTasks = items.filter((task) => {
     if (filter === "active") return !task.completed
     if (filter === "completed") return task.completed
     return true
