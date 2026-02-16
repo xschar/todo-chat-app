@@ -1,0 +1,42 @@
+.regular {
+  color: black;
+  font-size: var(--fs-base);
+  text-transform: uppercase;
+  width: calc(2.5 * var(--fs-xl));
+}
+
+.filter {
+  color: black;
+  font-size: var(--fs-sm);
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: calc(2.5 * var(--fs-xl));
+}
+
+.action {
+  color: green;
+  font-size: var(--fs-sm);
+  text-transform: lowercase;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  border-radius: var(--fs-xs);
+  padding: var(--fs-xs) calc(2 * var(--fs-xs));
+}
+
+.regular:hover,
+.action:hover,
+.filter:hover {
+  cursor: pointer;
+}
+
+.regular,
+.filter {
+  padding: var(--fs-xs);
+}
+
+.active,
+.filter:hover {
+  border: 2px solid black;
+  font-weight: 600;
+}

@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+:root {
+  --fs-xs: clamp(5px, 0.2rem + 0.2vw, 10px);
+  --fs-sm: clamp(14px, 0.8rem + 0.3vw, 16px);
+  --fs-base: clamp(16px, 1rem + 0.5vw, 20px);
+  --fs-lg: clamp(20px, 1.2rem + 1vw, 32px);
+  --fs-xl: clamp(28px, 2rem + 2vw, 48px);
+}
