@@ -1,14 +1,14 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const isProd = process.env.NODE_ENV === "production"
 
 module.exports = {
-  mode: "development",
   entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, "..", "dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/todo-chat-app/",
+    publicPath: isProd ? "/todo-chat-app/" : "/",
     clean: true
   },
   resolve: {
@@ -44,11 +44,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "", "./src/index.html")
+      template: path.resolve(__dirname, "src", "index.html")
     }),
     new MiniCssExtractPlugin()
   ],
   devServer: {
-    static: "./dist"
+    static: {
+      directory: path.join(__dirname, "dist")
+    },
+    historyApiFallback: true,
+    port: 3000,
+    open: true
   }
 }
