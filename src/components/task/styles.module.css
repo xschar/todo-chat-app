@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: var(--fs-xs);
+  padding: var(--fs-xs);
+  align-items: center;
+  gap: var(--fs-xs);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.checkbox {
+  margin-right: var(--fs-xs);
+  width: var(--fs-lg);
+  height: var(--fs-lg);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.inputTask {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--fs-lg);
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: var(--fs-xs);
+  flex-shrink: 0;
+}

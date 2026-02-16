@@ -51,4 +51,4 @@
 - [x] Make it possible to filtering tasks with status
 - [x] Make it possible to drag and drop tasks
 - [x] Make it possible to saving tasks to the browser's local storage
-- [ ] Create nice stylez =)
+- [x] Create nice stylez =)

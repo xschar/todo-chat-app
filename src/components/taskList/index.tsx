@@ -3,6 +3,7 @@ import {useAppSelector} from "store/hooks"
 import {Task} from "components/task"
 import {useAppDispatch} from "store/hooks"
 import {reorderTasks} from "store/taskSlice"
+import * as styles from "./styles.module.css"
 
 export const TaskList: React.FC = () => {
   const [draggedId, setDraggedId] = useState<string | null>(null)
@@ -21,7 +22,7 @@ export const TaskList: React.FC = () => {
   }, [items, filter])
 
   if (filteredTasks.length === 0) {
-    return <p>No tasks found</p>
+    return <p className={styles.noTasks}>No tasks found</p>
   }
 
   const handleDragStart = (id: string) => {
@@ -45,9 +46,10 @@ export const TaskList: React.FC = () => {
     setDraggedId(null)
   }
   return (
-    <div>
+    <div className={styles.container}>
       {filteredTasks.map((task) => (
         <div
+          className={styles.draggableItem}
           key={task.id}
           draggable
           onDragStart={() => handleDragStart(task.id)}

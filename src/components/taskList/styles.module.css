@@ -1,0 +1,18 @@
+.noTasks {
+  text-align: center;
+  font-size: var(--fs-lg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fs-xs);
+}
+
+.draggableItem {
+  cursor: grabbing;
+}
+
+.draggableItem:active {
+  opacity: 0.1;
+}
