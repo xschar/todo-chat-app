@@ -3,11 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
-    mode: "development",
+  mode: "development",
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "..", "dist"),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: "/todo-chat-app/",
+    clean: true
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
