@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useMemo} from "react"
 import {useAppSelector} from "store/hooks"
 import {Task} from "components/task"
 import {useAppDispatch} from "store/hooks"
@@ -9,11 +9,20 @@ export const TaskList: React.FC = () => {
   const dispatch = useAppDispatch()
   const tasks = useAppSelector((state) => state.tasks.items)
   const {items, filter} = useAppSelector((state) => state.tasks)
-  const filteredTasks = items.filter((task) => {
-    if (filter === "active") return !task.completed
-    if (filter === "completed") return task.completed
-    return true
-  })
+  const filteredTasks = useMemo(() => {
+    switch (filter) {
+      case "active":
+        return items.filter((t) => !t.completed)
+      case "completed":
+        return items.filter((t) => t.completed)
+      default:
+        return items
+    }
+  }, [items, filter])
+
+  if (filteredTasks.length === 0) {
+    return <p>No tasks found</p>
+  }
 
   const handleDragStart = (id: string) => {
     setDraggedId(id)

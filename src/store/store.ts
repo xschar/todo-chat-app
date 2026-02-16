@@ -11,8 +11,6 @@ export const store = configureStore({
   preloadedState: preloadedState ? {tasks: preloadedState} : undefined
 })
 
-console.log("Initial Redux state:", store.getState())
-
 store.subscribe(() => {
   const state = store.getState()
   saveState(state.tasks)
