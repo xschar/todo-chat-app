@@ -20,6 +20,6 @@
 }
 
 .container > main {
-  width: 100vw;
+  width: calc(min(100vw, 1240px));
   padding: var(--fs-base);
 }
