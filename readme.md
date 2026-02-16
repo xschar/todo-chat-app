@@ -39,16 +39,11 @@
 - Eslint, Prettier
 - Webpack
 
-## Tasks:
+## Installation
 
-- [x] Initiate boilerplate
-- [x] Make a simple UI
-- [x] Configure redux
-- [x] Make it possible to add tasks
-- [x] Make it possible to delete tasks
-- [x] Make it possible to edit tasks
-- [x] Make it possible to mark completed tasks
-- [x] Make it possible to filtering tasks with status
-- [x] Make it possible to drag and drop tasks
-- [x] Make it possible to saving tasks to the browser's local storage
-- [x] Create nice stylez =)
+```
+git clone https://github.com/xschar/todo-chat-app.git
+cd todo-chat-app
+npm install
+npm start
+```
