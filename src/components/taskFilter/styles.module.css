@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  gap: var(--fs-xs);
+  justify-content: end;
+  margin-bottom: var(--fs-base);
+  margin-top: var(--fs-xs);
+}

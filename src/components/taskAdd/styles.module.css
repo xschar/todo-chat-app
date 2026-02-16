@@ -1,0 +1,10 @@
+.inputTask {
+  font-size: var(--fs-lg);
+  width: 100%;
+}
+
+.formAdd {
+  display: flex;
+  justify-content: center;
+  gap: var(--fs-xs);
+}

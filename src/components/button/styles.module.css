@@ -1,7 +1,33 @@
 .regular {
   color: blue;
+  font-size: var(--fs-base);
+  text-transform: uppercase;
+}
+
+.filter {
+  color: black;
+  font-size: var(--fs-sm);
+  background-color: white;
 }
 
 .action {
   color: green;
+  font-size: var(--fs-sm);
+  text-transform: lowercase;
+  border: 1px solid #ccc;
+  border-radius: var(--fs-xs);
+}
+
+.regular:hover,
+.action:hover,
+.filter:hover,
+.filter:focus {
+  cursor: pointer;
+  background-color: aqua;
+}
+
+.regular,
+.action,
+.filter {
+  padding: var(--fs-xs);
 }

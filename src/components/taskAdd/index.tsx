@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import {Button} from "components/button"
 import {useDispatch} from "react-redux"
 import {addTask} from "store/taskSlice"
+import * as styles from "./styles.module.css"
 
 export const TaskAdd: React.FC = () => {
   const [value, setValue] = useState<string>("")
@@ -18,8 +19,9 @@ export const TaskAdd: React.FC = () => {
   }
 
   return (
-    <form name="addTask" onSubmit={handleSubmit}>
+    <form className={styles.formAdd} name="addTask" onSubmit={handleSubmit}>
       <input
+        className={styles.inputTask}
         type="text"
         placeholder="type your task..."
         aria-label="Text input"

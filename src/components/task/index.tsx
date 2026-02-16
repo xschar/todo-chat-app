@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import {Button} from "components/button"
 import {useAppDispatch} from "store/hooks"
 import {deleteTask, toggleTask, updateTask} from "store/taskSlice"
+import * as styles from "./styles.module.css"
 
 interface TaskProps {
   id: string
@@ -29,44 +30,55 @@ export const Task: React.FC<TaskProps> = ({id, title, completed}) => {
   }
 
   return (
-    <div>
-      {isEditing ? (
-        <input
-          type="checkbox"
-          checked={completed}
-          onChange={handleChecked}
-          disabled
-        />
-      ) : (
-        <input type="checkbox" checked={completed} onChange={handleChecked} />
-      )}
+    <div className={styles.container}>
+      <div className={styles.content}>
+        {isEditing ? (
+          <input
+            className={styles.checkbox}
+            type="checkbox"
+            checked={completed}
+            onChange={handleChecked}
+            disabled
+          />
+        ) : (
+          <input
+            className={styles.checkbox}
+            type="checkbox"
+            checked={completed}
+            onChange={handleChecked}
+          />
+        )}
 
-      {isEditing ? (
-        <input
-          value={editValue}
-          onChange={(e) => setEditValue(e.target.value)}
-        />
-      ) : (
-        <span>{title}</span>
-      )}
-      {isEditing ? (
-        <Button displayType="action" title="Save" onClick={handleSave} />
-      ) : (
-        <Button
-          displayType="action"
-          title="Edit"
-          onClick={() => setIsEditing(true)}
-        />
-      )}
-      {isEditing ? (
-        <Button
-          displayType="action"
-          title="Cancel"
-          onClick={() => setIsEditing(false)}
-        />
-      ) : (
-        <Button displayType="action" title="Delete" onClick={handleDelete} />
-      )}
+        {isEditing ? (
+          <input
+            className={styles.inputTask}
+            value={editValue}
+            onChange={(e) => setEditValue(e.target.value)}
+          />
+        ) : (
+          <span className={styles.inputTask}>{title}</span>
+        )}
+      </div>
+      <div className={styles.buttonsContainer}>
+        {isEditing ? (
+          <Button displayType="action" title="Save" onClick={handleSave} />
+        ) : (
+          <Button
+            displayType="action"
+            title="Edit"
+            onClick={() => setIsEditing(true)}
+          />
+        )}
+        {isEditing ? (
+          <Button
+            displayType="action"
+            title="Cancel"
+            onClick={() => setIsEditing(false)}
+          />
+        ) : (
+          <Button displayType="action" title="Delete" onClick={handleDelete} />
+        )}
+      </div>
     </div>
   )
 }
