@@ -1,6 +1,6 @@
 # Chat-app test
 
-Тестовое задание для Chat-app
+[Тестовое задание для Chat-app](https://xschar.github.io/todo-chat-app/)
 
 ## Description
 
