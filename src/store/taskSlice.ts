@@ -59,10 +59,27 @@ const taskSlice = createSlice({
       if (task) {
         task.title = action.payload.title
       }
+    },
+    reorderTasks(state, action: PayloadAction<{fromId: string; toId: string}>) {
+      const {fromId, toId} = action.payload
+
+      const fromIndex = state.item.findIndex((t) => t.id === fromId)
+      const toIndex = state.item.findIndex((t) => t.id === toId)
+
+      if (fromIndex === -1 || toIndex === -1) return
+
+      const [moved] = state.item.splice(fromIndex, 1)
+      state.item.splice(toIndex, 0, moved)
     }
   }
 })
 
-export const {addTask, deleteTask, toggleTask, setFilter, updateTask} =
-  taskSlice.actions
+export const {
+  addTask,
+  deleteTask,
+  toggleTask,
+  setFilter,
+  updateTask,
+  reorderTasks
+} = taskSlice.actions
 export default taskSlice.reducer

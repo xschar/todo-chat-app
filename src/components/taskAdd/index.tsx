@@ -17,7 +17,7 @@ export const TaskAdd: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form name="addTask" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="type your task..."
