@@ -49,6 +49,7 @@ export const TaskList: React.FC = () => {
     <div className={styles.container}>
       {filteredTasks.map((task) => (
         <div
+          className={styles.draggableItem}
           key={task.id}
           draggable
           onDragStart={() => handleDragStart(task.id)}

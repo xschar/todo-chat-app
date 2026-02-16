@@ -8,3 +8,11 @@
   flex-direction: column;
   gap: var(--fs-xs);
 }
+
+.draggableItem {
+  cursor: grabbing;
+}
+
+.draggableItem:active {
+  opacity: 0.1;
+}
