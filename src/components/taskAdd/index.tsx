@@ -10,9 +10,10 @@ export const TaskAdd: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if (!value.trim()) return
+    const trimmed = value.trim()
+    if (!trimmed) return
 
-    dispatch(addTask(value))
+    dispatch(addTask(trimmed))
     setValue("")
   }
 
